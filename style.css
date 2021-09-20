@@ -28,6 +28,7 @@ body {
 
 .logo {
   width: 120px;
+  margin: 40px;
 }
 
 .logo > img {
@@ -70,7 +71,7 @@ body {
 }
 
 .whoami {
-  margin-top: 100px;
+  margin: 40px;
   font-family: "FVAlmeloRegular";
   font-size: 3.5rem;
   color: white;

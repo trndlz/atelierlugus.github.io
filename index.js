@@ -1,14 +1,23 @@
 const video = document.getElementById("video");
 
-window.addEventListener("hashchange", function(e) {
+function closePlayer() {
   if (!document.fullscreenElement) {
+    video.pause();
     video.style.display = "none";
   }
-})
+}
 
-document.onfullscreenchange = function ( event ) {
+video.addEventListener("webkitfullscreenchange", closePlayer);
+video.addEventListener("mozfullscreenchange", closePlayer);
+video.addEventListener("fullscreenchange", closePlayer);
+
+window.addEventListener("hashchange", function (e) {
+  closePlayer();
+});
+
+document.onfullscreenchange = function (event) {
   if (!document.fullscreenElement) {
-    video.style.display = "none";
+    closePlayer();
   }
 };
 
@@ -20,24 +29,28 @@ function toggleFullScreen() {
         video.load();
         video.play();
       });
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen().then(() => {
-        video.style.display = "none";
-      });
     } else {
-      video.style.display = "none";
+      if (document.exitFullscreen) {
+        document.exitFullscreen().then(() => {
+          closePlayer();
+        });
+      } else {
+        closePlayer();
+      }
     }
-  }
   } else {
-    window.alert('Sorry, your browser is not compatible with full screen mode !')
+    window.alert(
+      "Sorry, your browser is not compatible with full screen mode !"
+    );
   }
-  
 }
 
-
-const hooligan = ["Allez, Lorient, allez !", "Visitez https://fclweb.fr/", "Lorient est hauuuuuuuuuuuuuuuuuuuuut !" ];
+const hooligan = [
+  "Allez, Lorient, allez !",
+  "Visitez https://fclweb.fr/",
+  "Lorient est hauuuuuuuuuuuuuuuuuuuuut !",
+];
 
 hooligan.forEach((h) => {
-  console.log(`%c ${h}`, 'background: #ffa500');
-})
+  console.log(`%c ${h}`, "background: #ffa500");
+});
