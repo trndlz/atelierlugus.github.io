@@ -74,7 +74,7 @@ body {
   position: fixed;
   right: 50%;
   top: 50%;
-  transform: translate(50%,-50%);
+  transform: translate(50%, -50%);
   transition: all 0.3s ease 0s;
   max-width: 40vw;
 }
@@ -99,16 +99,27 @@ body {
   }
 }
 
-
 .cigales {
   font-family: "FVAlmeloRegular";
   position: fixed;
-  bottom: 5vh;
+  bottom: 3.4vh;
   right: 50%;
-  transform: translate(50%,0%);
+  transform: translate(50%, 0%);
   text-align: center;
-  font-size: 1.5rem;
-  color: #679298;
+  font-size: 1rem;
+  color: #fff;
+  width: 90vw;
+}
+
+.whoami {
+  font-family: "FVAlmeloRegular";
+  position: fixed;
+  top: 3.4vh;
+  right: 50%;
+  transform: translate(50%, 0%);
+  text-align: center;
+  font-size: 4.5rem;
+  color: #fff;
 }
 
 .toggle-button-container > button:hover {
