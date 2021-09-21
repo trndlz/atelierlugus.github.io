@@ -10,21 +10,21 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="logo"><img src="public/img/exp_logo.png" /></div>
-      <div class="toggle-button-container">
-        <button onclick="toggleFullScreen()">
-          Lire la vidéo en plein écran
-        </button>
-      </div>
-      <div class="whoami">ATELIER LUGUS</div>
-    </div>
     <video controls class="video" id="video" preload="metadata">
       <source
         src="https://atelierlugus.com/wp-content/uploads/video.mp4"
         type="video/mp4"
       />
     </video>
+    <div class="background">
+      <img src="public/img/exp_background.jpg" class="background_img" />
+    </div>
+    <div class="toggle-button-container">
+      <button onclick="toggleFullScreen()">
+        Regarder en <br /><span class="plein_ecran">plein écran</span>
+      </button>
+    </div>
+    <div class="cigales">(et monter le volume pour entendre les cigales)</div>
     <script src="index.js"></script>
   </body>
 </html>
