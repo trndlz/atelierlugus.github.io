@@ -1,4 +1,5 @@
 const video = document.getElementById("video");
+const welcome = document.getElementById("welcome");
 
 function closePlayer() {
   if (!document.fullscreenElement) {
@@ -39,9 +40,10 @@ function toggleFullScreen() {
       }
     }
   } else {
-    window.alert(
-      "Sorry, your browser is not compatible with full screen mode !"
-    );
+    video.style.display = "block";
+    video.load();
+    video.play();
+    welcome.style.display = "none";
   }
 }
 

@@ -16,16 +16,18 @@
         type="video/mp4"
       />
     </video>
-    <div class="background">
-      <img src="public/img/exp_background.jpg" class="background_img" />
+    <div id="welcome">
+      <div class="background">
+        <img src="public/img/exp_background.jpg" class="background_img" />
+      </div>
+      <div class="toggle-button-container">
+        <button onclick="toggleFullScreen()">
+          Regarder en <br /><span class="plein_ecran">plein écran</span>
+        </button>
+      </div>
+      <div class="cigales">(et monter le volume pour entendre les cigales)</div>
+      <div class="whoami">Atelier Lugus</div>
     </div>
-    <div class="toggle-button-container">
-      <button onclick="toggleFullScreen()">
-        Regarder en <br /><span class="plein_ecran">plein écran</span>
-      </button>
-    </div>
-    <div class="cigales">(et monter le volume pour entendre les cigales)</div>
-    <div class="whoami">Atelier Lugus</div>
     <script src="index.js"></script>
   </body>
 </html>
